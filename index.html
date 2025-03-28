@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uz">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ob-havo Ilovasi</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body
+		class="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white"
+	>
+		<video
+			autoplay
+			muted
+			loop
+			class="absolute top-0 left-0 w-full h-full object-cover -z-10"
+		>
+			<source src="./media/1893623-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+
+		<h1
+			class="text-4xl font-extrabold text-white mb-6 bg-opacity-40 px-6 py-3 rounded-lg shadow-lg"
+		>
+			Ob-havo
+		</h1>
+
+		<!-- Foydalanuvchi qidirishi bo‘yicha ob-havo -->
+		<div
+			class="relative bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 bg-size-200 bg-pos-0 animate-gradient shadow-xl rounded-2xl p-6 w-full max-w-md text-center mb-8"
+		>
+			<div class="relative mb-4">
+				<input
+					type="text"
+					id="city-input"
+					class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 text-gray-800"
+					placeholder="Davlat nomini kiriting"
+				/>
+				<div
+					id="suggestions"
+					class="absolute w-full bg-white shadow-lg mt-1 rounded-lg"
+				></div>
+			</div>
+			<button
+				id="search-btn"
+				class="w-full bg-white bg-opacity-30 hover:bg-opacity-40 text-gray-800 font-semibold py-2 rounded-lg transition-all"
+			>
+				Qidirish 🔍
+			</button>
+			<div
+				class="weather-info mt-6 p-6 bg-white bg-opacity-50 rounded-lg hidden"
+			>
+				<h3 id="city-name" class="text-2xl font-semibold text-gray-900"></h3>
+				<img
+					id="weather-icon"
+					src=""
+					alt="Weather Icon"
+					class="mx-auto my-2 hidden"
+				/>
+				<p id="temperature" class="text-lg text-gray-900"></p>
+				<p id="description" class="text-gray-700"></p>
+			</div>
+		</div>
+
+		<div
+			class="bg-white bg-opacity-50 backdrop-blur-lg shadow-2xl rounded-2xl p-6 w-full max-w-md text-center animate-"
+		>
+			<h2 class="text-3xl font-bold text-gray-100 mb-4">
+				🌍 Sizning joylashuvingiz
+			</h2>
+			<div id="user-weather" class="hidden">
+				<h3 id="user-city" class="text-2xl font-semibold text-gray-200"></h3>
+				<img
+					id="user-icon"
+					src=""
+					alt="Weather Icon"
+					class="mx-auto my-2 hidden"
+				/>
+				<p id="user-temp" class="text-lg text-gray-300"></p>
+				<p id="user-desc" class="text-gray-300"></p>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
